@@ -1,0 +1,175 @@
+* {
+	margin: auto;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+.wrap-hero {
+	width: 70%;
+	margin: auto;
+	overflow: hidden;
+}
+header {
+	padding: 30px 0px;
+	text-align: center;
+	font-size: 25px;
+}
+header::after {
+	content: '';
+	margin: auto;
+	width: 70%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	border: solid 1px rgb(185, 179, 179);
+}
+
+footer::after {
+	content: '';
+	margin: auto;
+	width: 70%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	border: solid 1px rgb(185, 179, 179);
+}
+.content-footer {
+	padding: 40px 0px;
+	display: flex;
+}
+
+nav > ul {
+	list-style: none;
+}
+nav > ul > li {
+	display: inline;
+}
+nav > ul > li > a {
+	text-decoration: none;
+	color: black;
+	text-transform: capitalize;
+	padding: 10px 10px 10px 0px;
+}
+h2 {
+	text-transform: capitalize;
+}
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+/* decor */
+@keyframes back {
+	50% {
+		background-color: aquamarine;
+	}
+}
+@keyframes beat {
+	0% {
+		transform: scale(1) rotate(-45deg);
+	}
+	50% {
+		transform: scale(0.6) rotate(-45deg);
+	}
+}
+.heart {
+	position: absolute;
+	top: 3%;
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+	transform: rotate(-45deg);
+}
+.heart-left {
+	left: 30%;
+	animation-delay: 0.2;
+}
+.heart-right {
+	right: 30%;
+	animation-delay: 0.4;
+}
+
+.heart-left::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+	border-radius: 50%;
+	top: 0;
+	left: 25px;
+}
+.heart-left::before {
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+	border-radius: 50%;
+	top: -25px;
+	left: 0;
+}
+
+.heart-right::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+	border-radius: 50%;
+	top: 0;
+	left: 25px;
+}
+.heart-right::before {
+	position: absolute;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+	border-radius: 50%;
+	top: -25px;
+	left: 0;
+}
+
+.animation-body {
+	/* animation: back 1s ease-in-out 0.2 infinite alternate forwards; */
+	animation-name: back;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0.1;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-direction: reverse;
+}
+.animation-heart {
+	/* animation: beat 1s ease-in-out 0.2 infinite alternate forwards; */
+	animation-name: beat;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-direction: reverse;
+}
+
+.toggle.ios,
+.toggle-on.ios,
+.toggle-off.ios {
+	border-radius: 20rem;
+}
+.toggle.ios .toggle-handle {
+	border-radius: 20rem;
+}
+.turn-rgb {
+	position: absolute;
+	top: 5%;
+	right: 15%;
+}
+input#result,
+input#content_predict {
+	font-size: 25px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+textarea#content-predict,
+label {
+	font-size: 25px;
+}

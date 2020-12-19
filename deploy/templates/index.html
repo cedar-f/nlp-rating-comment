@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="../static/assets/image/logo/18514984.jpg" type="image/icon type">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sentiment analysis for Vietnames on comments</title>
+		<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/assets/css/style.css" />
+		<link rel="stylesheet" href="../static/assets/css/bootstrap4-toggle.min.css">
+	</head>
+	<body id="back-bd" class="animation-body">
+		<div class="wrap-hero">
+			<div class="container-fluid">
+			<div class="turn-rgb">
+				<input id="switch" type="checkbox" checked data-toggle="toggle" data-style="ios" >
+			</div>
+			<header>
+				<h2>
+					natural language processing Demo </i>
+					<!-- uses solid style -->
+				</h2>
+				<p><strong>Sentiment analysis for Vietnames on comments</strong></p>
+				<div  class="heart heart-left animation-heart"></div>
+				<div class="heart heart-right animation-heart"></div>
+			</header>
+			<section>
+				<form action="{{url_for('predict')}}" method="POST">
+					<div class="form-group">
+						<label for="content-predict"
+							>Your content you want to predict
+							<i class="fas fa-user"></i></label
+						>
+						<textarea
+							class="form-control"
+							id="content-predict"
+							rows="3"
+							name="content_predict"
+						></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary mb-2">
+						Predict now <i class="far fa-smile-wink"></i>
+					</button>
+					
+				</form>
+				<form>
+				<hr>
+				<div class="form-group">
+					<label for="content_predict">Content Predicted</label>
+					<input type="text" class="form-control" id="content_predict" aria-describedby="emailHelp" placeholder="Content Predicted" readonly value="{{content}}">
+				</div>
+				<div class="form-group">
+					<label for="result">Outcome</label>
+					<input type="text" class="form-control" id="result" placeholder="Result" readonly value="{{outcome}}">
+				</div>
+				</form>
+			</section>
+			<footer>
+				<div class="content-footer">
+					<aside class="left">
+						<h2>instructor</h1>
+						<nav>
+							<ul>
+								<li><a href="#">ts. đặng thị phúc</a></li>
+							</ul>
+						</nav>
+					</aside>
+					<aside class="right">
+						<h2>Author</h2>
+						<nav>
+							<ul>
+								<li><a href="#">17045111 đỗ tùng lâm</a></li>
+								<li><a href="#">17023701 lê minh phú</a></li>
+								<li><a href="#">17037881 trần ngọc thương</a></li>
+							</ul>
+						</nav>
+					</aside>
+				</div>
+				
+			</footer>
+		</div>
+		</div>
+		<!-- FONTEAWESOME -->
+		<link rel="stylesheet" href="../static/assets/fontawesome5.15.1/css/all.min.css" />
+		<script src="../static/assets/fontawesome5.15.1/js/all.min.js"></script>
+		<script src="../static/assets/js/bootstrap.min.js"></script>
+		<script src="../static/assets/js/jquery-3.2.1.slim.min.js"></script>
+		<script src="../static/assets/js/popper.min.js"></script>
+		<script src="../static/assets/js/bootstrap4-toggle.min.js"></script>
+		<script src="../static/assets/js/script.js"></script>
+	</body>
+</html>
